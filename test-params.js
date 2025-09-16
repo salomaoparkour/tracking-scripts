@@ -5,5 +5,10 @@
   for (const [key, value] of params.entries()) {
     result[key] = value;
   }
-  console.log("Captured URL parameters:", result);
+  
+  if (Object.keys(result).length > 0) {
+    console.log("Captured URL parameters:", result);
+  } else {
+    console.log("No URL parameters found on this page.");
+  }
 })();
